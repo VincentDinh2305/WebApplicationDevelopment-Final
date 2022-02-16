@@ -1,0 +1,38 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1><%= title %></h1>
+          
+            <form class="form" method="post">
+              <div class="form-group">
+                <label for="NameTextField">Title</label>
+                <input type="text" class="form-control" id="NameTextField"
+                placeholder="Artwork Title" name="title" value="<%= books.Title %>" required>
+              </div>
+              <div class="form-group">
+                <label for="PriceTextField">Year</label>
+                <input type="text" class="form-control" id="PriceTextField"
+                placeholder="Artwork Year" name="year" value="<%= books.Year %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="AuthorTextField">Artist</label>
+                <input type="text" class="form-control" id="AuthorTextField"
+                placeholder="Artist Name" name="artist" value="<%= books.Artist %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="GenreTextField">Style</label>
+                <input type="text" class="form-control" id="GenreTextField"
+                placeholder="Artwork Style" name="style" value="<%= books.Style %>"  required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/artgallery" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
